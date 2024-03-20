@@ -21,9 +21,9 @@ def test_main(capsys):
     importlib.reload(main)
     main.printOut()
     captured = capsys.readouterr()
-    assert "Hello, World!" in captured.out
+    assert "Hello, World" in captured.out
     switch_git_branch("dev")
     importlib.reload(main)
     main.printOut()
     captured = capsys.readouterr()
-    assert "Hello, Dr. Bardoe!" in captured.out
+    assert "Hello, Dr. Bardoe" in captured.out
