@@ -10,7 +10,7 @@ Be sure to push your work back to github.
 
 ## Extension Idea
 
-* Create two more branches. One called **`feature1`** and another **`feature1dev`**. Make 'feature1dev' starting from your 
+* Create two more branches. One called **`feature1`** and another **`feature1dev`**. Make `feature1dev` starting from your 
   previous `dev` branch. Make a change to that, then branch off from there to make `feature1dev`. Make a change there and then
   use a pull request to merge that change back into feature1. Be sure to commit and push 
   each branch. Make good commit messages.
