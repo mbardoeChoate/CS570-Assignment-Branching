@@ -11,15 +11,14 @@ def switch_git_branch(branch_name):
 
         # Execute the git checkout command
         subprocess.check_call(['git', 'checkout', branch_name])
-        #print(f"Successfully switched to branch {branch_name}")
+        # print(f"Successfully switched to branch {branch_name}")
     except subprocess.CalledProcessError as e:
         print(f"Failed to switch to branch {branch_name}: {e}")
 
 
-def test_main(capsys):
-    switch_git_branch("main")
+def test_dev(capsys):
+    switch_git_branch("dev")
     importlib.reload(main)
     main.printOut()
     captured = capsys.readouterr()
-    assert "Hello, World" in captured.out
-
+    assert "Hello, Dr. Bardoe" in captured.out
