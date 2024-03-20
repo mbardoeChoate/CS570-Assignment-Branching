@@ -6,7 +6,7 @@ Then create another branch called `dev`. On this branch it should say "Hello, Dr
 each branch. Make good commit messages.
 
 
-Be sure to push your work back to github. 
+Be sure to push your work back to GitHub. 
 
 ## Extension Idea
 
