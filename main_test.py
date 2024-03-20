@@ -1,4 +1,5 @@
 import main
+import importlib
 
 import subprocess
 
@@ -15,8 +16,14 @@ def switch_git_branch(branch_name):
         print(f"Failed to switch to branch {branch_name}: {e}")
 
 
-def test_main():
+def test_main(capsys):
     switch_git_branch("main")
-    assert main.printOut() == "Hello, World"
+    importlib.reload(main)
+    main.printOut()
+    captured = capsys.readouterr()
+    assert "Hello, World!" in captured.out
     switch_git_branch("dev")
-    assert main.printOut() == "Hello, Dr. Bardoe"
+    importlib.reload(main)
+    main.printOut()
+    captured = capsys.readouterr()
+    assert "Hello, Dr. Bardoe!" in captured.out
