@@ -17,6 +17,6 @@ def switch_git_branch(branch_name):
 
 def test_main():
     switch_git_branch("main")
-    assert main.printOut() == "Hello, Dr. Bardoe"
+    assert main.printOut() == "Hello, World"
     switch_git_branch("dev")
     assert main.printOut() == "Hello, Dr. Bardoe"
